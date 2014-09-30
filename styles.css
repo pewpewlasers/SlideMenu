@@ -59,12 +59,12 @@ Nav Slide Panel
 }
 
 #nav-menu {
-  width: 230px;
+  width: 200px;
   background-color: #CCC;
 }
 
 #push-panel {
-  left: 230px;
+  left: 200px;
   right: 0;
   background-color: pink;
   transition: left .2s;
@@ -80,15 +80,20 @@ Nav Slide Panel
 
 .treatment-subnav.active {
 	display: block;
- 	width: 200px;
+ 	width: 320px;
  	height: 100%;
  	background-color: #EEE;
 }
 
 .menu-debugging {
 	position: absolute;
-	bottom: 30px;
+	top: 0; right: 0; bottom: 0; left: 0;
+	margin: auto;
+	height: 50px;
+	width: 200px;
 	font-weight: 900;
+	padding: 20px;
+	border: 1px solid gray;
 }
 
 .nav-menu-state {
