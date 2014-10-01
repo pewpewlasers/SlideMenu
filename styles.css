@@ -56,8 +56,13 @@ html {
 }
 
 a {
-	text-decoration: none;
-	color: #EAFDE6;
+  text-decoration: none;
+  color: #EAFDE6;
+}
+
+#nav-menu,
+.subnav-menu {
+  font-size: 1.2em;
 }
 
 #nav-menu {
@@ -73,8 +78,24 @@ a {
 }
 
 #nav-menu ul li {
-	padding: 10px 0 10px 50px;
-	font-size: 1.2em;
+	padding: 10px 0 10px 50px;	
+}
+
+.subnav-menu {
+	display: none;
+	padding-left: 20px;
+	float: left;
+ 	width: 300px;
+ 	height: 100%;
+ 	background-color: #519548;
+}
+
+.subnav-menu.active {
+	display: block;	
+}
+
+.subnav-menu ul li {
+	padding: 10px 0 10px 0px;	
 }
 
 #main-content {
@@ -86,18 +107,6 @@ a {
 #nav-menu.collapsed {
   width: 50px;
   transition: all .2s;
-}
-
-.subnav-menu {
-	display: none;
-}
-
-.subnav-menu.active {
-	display: block;
-	float: left;
- 	width: 300px;
- 	height: 100%;
- 	background-color: #519548;
 }
 
 .menu-debugging {
