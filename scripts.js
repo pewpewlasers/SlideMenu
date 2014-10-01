@@ -45,3 +45,5 @@ function updateDebugInfo() {
     $('.currently-selected-link').html('Current Page: ' + currentlySelectedLink);
 }
 
+//test
+
