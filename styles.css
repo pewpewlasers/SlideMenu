@@ -51,23 +51,37 @@ table {
 Nav Slide Panel
 --------------------------------------------
 */
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #EAFDE6;
+}
+
 #nav-menu, 
 #push-panel {
+  color: #C9C3E6;
   position: absolute;
   top: 0;
   bottom: 0;
 }
 
 #nav-menu {
-  width: 200px;
-  background-color: #CCC;
+  width: 220px;
+  background-color: #1B676B;
 }
 
 #push-panel {
-  left: 200px;
+  left: 220px;
   right: 0;
-  background-color: pink;
+  background-color: #EAFDE6;
   transition: left .2s;
+}
+
+#push-panel.collapsed {
+  left: 50px;
 }
 
 #push-panel.collapsed {
@@ -82,7 +96,7 @@ Nav Slide Panel
 	display: block;
  	width: 320px;
  	height: 100%;
- 	background-color: #EEE;
+ 	background-color: #519548;
 }
 
 .menu-debugging {
