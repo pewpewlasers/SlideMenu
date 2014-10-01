@@ -60,41 +60,42 @@ a {
 	color: #EAFDE6;
 }
 
-#nav-menu, 
-#push-panel {
-  color: #C9C3E6;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
 #nav-menu {
-  width: 220px;
+  float: left;
+  height: 100%;
+  width: 200px;
   background-color: #1B676B;
+  transition: all .2s;
 }
 
-#push-panel {
-  left: 220px;
-  right: 0;
-  background-color: #EAFDE6;
+#nav-menu ul {
+	width: 200px;
+}
+
+#nav-menu ul li {
+	padding: 10px 0 10px 50px;
+	font-size: 1.2em;
+}
+
+#main-content {
+  height: 100%;
+  background-color: #EAFDE6;  
   transition: left .2s;
 }
 
-#push-panel.collapsed {
-  left: 50px;
+#nav-menu.collapsed {
+  width: 50px;
+  transition: all .2s;
 }
 
-#push-panel.collapsed {
-  left: 50px;
-}
-
-.treatment-subnav {
+.subnav-menu {
 	display: none;
 }
 
-.treatment-subnav.active {
+.subnav-menu.active {
 	display: block;
- 	width: 320px;
+	float: left;
+ 	width: 300px;
  	height: 100%;
  	background-color: #519548;
 }

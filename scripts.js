@@ -12,7 +12,7 @@ $(document).ready(function() {
 	    	initialLoadPage = false;            
 
             if($(this).attr('name') !== currentlySelectedLink) {
-                var activeSubNav = $('.treatment-subnav.active');
+                var activeSubNav = $('.subnav-menu.active');
                 activeSubNav.removeClass('active');
             }
 
@@ -22,20 +22,20 @@ $(document).ready(function() {
     });
     $('#nav-menu').on('mouseenter', function() {
      	if(!navExpanded) {     		
-    		$('#push-panel').toggleClass('collapsed');
+    		$('#nav-menu').toggleClass('collapsed');
     		navExpanded = !navExpanded;
             updateDebugInfo()
      	}    	
     });    
     $('#nav-menu').on('mouseleave', function() {
      	if(navExpanded && !initialLoadPage) {   	
-    		$('#push-panel').toggleClass('collapsed');
+    		$('#nav-menu').toggleClass('collapsed');
     		navExpanded = !navExpanded;   
             updateDebugInfo()	
      	}    	
     });
     $('#nav-menu').on('click', "a[name='treatment']", function() {    
-            $('.treatment-subnav').addClass('active');
+            $('.subnav-menu').addClass('active');
             updateDebugInfo()    
     });
 });
