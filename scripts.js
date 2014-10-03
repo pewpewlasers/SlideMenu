@@ -70,7 +70,7 @@ function openCloseNav() {
             nextEventReady = false;
             navExpanded = !navExpanded; 
             $('#nav-menu').toggleClass('collapsed');    
-            $('#nav-menu').find('li span').fadeToggle(200);                           
+            $('#nav-menu').find('li span').fadeToggle(250);                           
         }
         if(!initialPageLoad && distanceToTarget > 40) {
             nextEventReady = true;
