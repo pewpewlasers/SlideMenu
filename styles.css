@@ -71,7 +71,7 @@ a {
   height: 100%;
   width: 200px;
   background-color: #1B676B;
-  transition: all .9s;
+  transition: all .3s;
   position: relative;
 }
 
@@ -87,7 +87,8 @@ a {
 	min-height: 40px;
 }
 
-#nav-menu li a span {
+#nav-menu li a span.fade-out {
+	visibility: hidden;
 }
 
 #nav-menu ul li.active {
@@ -117,7 +118,7 @@ a {
 
 #nav-menu.collapsed {
   width: 50px;
-  transition: all .9s;
+  transition: all .3s;
 }
 
 .menu-debugging {

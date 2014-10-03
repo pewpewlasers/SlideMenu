@@ -22,22 +22,25 @@ $(document).ready(function() {
             nextEventReady = true;
             updateDebugInfo();
     });
-/*   $('#nav-menu').on('mouseenter', function() {
-     	if(!navExpanded) {           	    		
-            $('#nav-menu').find('a').show();
-            $('#nav-menu').find('li span').fadeIn(200);
-            updateDebugInfo();
-     	}    	
-    });    
-    $('#nav-menu').on('mouseleave', function() {   
-     	if(navExpanded && !initialPageLoad) {             	
-            $('#nav-menu').find('li span').fadeOut(100);
-     	}    	
-    });*/
+
     $('#nav-menu').on('click', "a[name='treatment']", function() {    
             $('.subnav-menu').addClass('active');
             updateDebugInfo();    
     });
+
+     /*   $('#nav-menu').on('mouseleave', function() {   
+        if(!initialPageLoad && !navExpanded) {               
+            $('#nav-menu').find('li span').fadeOut(100);
+        }       
+    });
+
+   $('#nav-menu').on('mouseenter', function() {
+        if(navExpanded) {                           
+            $('#nav-menu').find('a').show();
+            $('#nav-menu').find('li span').fadeIn(200);
+            updateDebugInfo();
+        }       
+    });  */  
 });
 
 function updateDebugInfo() {
@@ -63,12 +66,11 @@ function openCloseNav() {
         mX = e.pageX;
         distanceToTarget = calculatedistanceToTarget($element, mX);
 
-        // 
         if(!initialPageLoad && distanceToTarget < 40 && nextEventReady) {
             nextEventReady = false;
             navExpanded = !navExpanded; 
-            $('#nav-menu').toggleClass('collapsed');
-            $('#nav-menu').find('li span').fadeOut(100);                   
+            $('#nav-menu').toggleClass('collapsed');    
+            $('#nav-menu').find('li span').fadeToggle(200);                           
         }
         if(!initialPageLoad && distanceToTarget > 40) {
             nextEventReady = true;
