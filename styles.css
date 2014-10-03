@@ -55,15 +55,15 @@ html {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 a {
   text-decoration: none;
   color: #EAFDE6;
+  line-height: 1;
 }
 
 #nav-menu,
 .subnav-menu {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 #nav-menu {
@@ -71,15 +71,26 @@ a {
   height: 100%;
   width: 200px;
   background-color: #1B676B;
-  transition: all .2s;
+  transition: all .9s;
+  position: relative;
 }
 
 #nav-menu ul {
-	width: 200px;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 #nav-menu ul li {
-	padding: 10px 0 10px 50px;	
+	padding: 10px 0 10px 50px;
+	border-top: 1px solid white;
+	min-height: 40px;
+}
+
+#nav-menu li a span {
+}
+
+#nav-menu ul li.active {
 }
 
 .subnav-menu {
@@ -102,25 +113,23 @@ a {
 #main-content {
   height: 100%;
   background-color: #EAFDE6;  
-  transition: left .2s;
 }
 
 #nav-menu.collapsed {
   width: 50px;
-  transition: all .2s;
+  transition: all .9s;
 }
 
 .menu-debugging {
 	position: absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 	margin: auto;
-	height: 50px;
-	width: 200px;
+	height: 100px;
+	width: 300px;
 	font-weight: 900;
 	padding: 20px;
 	border: 1px solid gray;
 }
 
 .nav-menu-state {
-
 }
