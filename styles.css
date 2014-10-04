@@ -57,8 +57,7 @@ html {
 }
 
 a {
-  text-decoration: none;
-  color: #0099CC;
+	
 }
 
 /*
@@ -71,7 +70,7 @@ VERTICAL NAV MENU
   font-size: 1em;
 }
 
-#side-nav {
+/* #side-nav {
   height: 100%;
   width: 200px;
   float: left;
@@ -80,6 +79,29 @@ VERTICAL NAV MENU
   border-right: 1px solid #CCC;
   background-color: #F1F1F1;
   transition: all .3s;
+} */
+
+#side-nav,
+#main-content {
+	transition: all .3s;
+}
+
+#side-nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+  height: 100%;
+  width: 200px;
+  overflow: hidden;
+  color: #0099CC;
+  text-decoration: none;
+  border-right: 1px solid #CCC;
+  background-color: #F1F1F1;
+}
+
+#side-nav a {	
+  color: #0099CC;
+  text-decoration: none;
 }
 
 #side-nav ul {
@@ -113,7 +135,6 @@ VERTICAL NAV MENU
 
 #side-nav.collapsed {
   width: 50px;
-  transition: all .3s;
 }
 
 #nav-pin {
@@ -164,7 +185,12 @@ CONTENT FRAME
 
 #main-content {
   height: 100%;
+  margin-left: 200px;
   background-color: white;  
+}
+
+#main-content.collapsed {
+	margin-left: 50px;
 }
 
 /*
@@ -193,4 +219,30 @@ DEBUGGING
 
 .brand-logo a {
 	float: left;
+}
+
+/*
+MEDIA QUERIES
+--------------------------------------------
+*/
+
+@media (max-width: 600px) {
+	.menu-debugging {
+		display: none;
+	}
+	#main-content {
+		height: auto;
+		margin: 0;
+		overflow: hidden;
+		float: left;
+	}
+  #side-nav {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  #side-nav .brand-logo {
+    display: none;
+  }
 }

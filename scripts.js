@@ -65,6 +65,7 @@ function openCloseNav() {
             nextEventReady = false;
             navExpanded = !navExpanded; 
             $('#side-nav').toggleClass('collapsed');    
+            $('#main-content').toggleClass('collapsed');
             //$('#side-nav').find('li span').fadeToggle(250);                           
         }
         if(!initialPageLoad && distanceToTarget > 40) {
