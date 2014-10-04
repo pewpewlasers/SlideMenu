@@ -1,7 +1,8 @@
 var navExpanded = true,
     nextEventReady = true,
     initialPageLoad = true;
-    currentlySelectedLink = '';
+    currentlySelectedLink = '',
+    navPinned = false;
 
 $(document).ready(function() {
 
@@ -28,19 +29,11 @@ $(document).ready(function() {
             updateDebugInfo();    
     });
 
-     /*   $('#nav-menu').on('mouseleave', function() {   
-        if(!initialPageLoad && !navExpanded) {               
-            $('#nav-menu').find('li span').fadeOut(100);
-        }       
+    $('#nav-menu').on('click', "#nav-pin", function() {    
+            $(this).toggleClass('selected');
+            navPinned = !navPinned;
     });
-
-   $('#nav-menu').on('mouseenter', function() {
-        if(navExpanded) {                           
-            $('#nav-menu').find('a').show();
-            $('#nav-menu').find('li span').fadeIn(200);
-            updateDebugInfo();
-        }       
-    });  */  
+ 
 });
 
 function updateDebugInfo() {
@@ -66,7 +59,7 @@ function openCloseNav() {
         mX = e.pageX;
         distanceToTarget = calculatedistanceToTarget($element, mX);
 
-        if(!initialPageLoad && distanceToTarget < 40 && nextEventReady) {
+        if(!initialPageLoad && distanceToTarget < 40 && nextEventReady && !navPinned) {
             nextEventReady = false;
             navExpanded = !navExpanded; 
             $('#nav-menu').toggleClass('collapsed');    

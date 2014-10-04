@@ -15,7 +15,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video {	
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -48,17 +48,23 @@ table {
 }
 
 /*
-Nav Slide Panel
+GLOBAL STYLES
 --------------------------------------------
 */
+
 html {
-  font-family: 'Open-Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Open-Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: #EAFDE6;
+  color: #0099CC;
 }
+
+/*
+VERTICAL NAV MENU
+--------------------------------------------
+*/
 
 #nav-menu,
 .subnav-menu {
@@ -69,15 +75,16 @@ a {
   float: left;
   height: 100%;
   width: 200px;
-  background-color: #2A8FBD;
   transition: all .3s;
   position: relative;
+  border-right: 1px solid #0099CC;
+  background-color: #F1F1F1;
 }
 
 #nav-menu ul {
-	width: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #nav-menu .nav-link span {
@@ -103,6 +110,31 @@ a {
 	background-color: #222222;
 }
 
+#nav-menu.collapsed {
+  width: 50px;
+  transition: all .3s;
+}
+
+#nav-pin {
+	height: 11px;
+	width: 11px;
+	border-radius: 50%;
+	border: 1px solid #0EBFE9;
+	position: absolute;
+	margin: 3px;
+	bottom: 0;
+	left: 0;
+}
+
+#nav-pin.selected {
+	background-color: #0EBFE9;
+}
+
+/*
+SUB-NAV MENU (CURRENTLY COMMENTED OUT)
+--------------------------------------------
+*/
+
 .subnav-menu {
 	display: none;
 	padding-left: 20px;
@@ -120,15 +152,20 @@ a {
 	padding: 10px 0 10px 0px;	
 }
 
+/*
+CONTENT FRAME
+--------------------------------------------
+*/
+
 #main-content {
   height: 100%;
-  background-color: #FCFEF5;  
+  background-color: white;  
 }
 
-#nav-menu.collapsed {
-  width: 50px;
-  transition: all .3s;
-}
+/*
+DEBUGGING 
+--------------------------------------------
+*/
 
 .menu-debugging {
 	position: absolute;
@@ -141,5 +178,3 @@ a {
 	border: 1px solid gray;
 }
 
-.nav-menu-state {
-}
