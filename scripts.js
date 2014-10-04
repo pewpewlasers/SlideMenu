@@ -13,10 +13,12 @@ $(document).ready(function() {
     $('.nav-link').on('click', function() {
 	    	initialPageLoad = false; 
 
-            if($(this).attr('name') !== currentlySelectedLink) {
-                var activeSubNav = $('.subnav-menu.active');
+            $('.nav-link').not(this).removeClass('selected');
+            $(this).addClass('selected');
+            /*if($(this).attr('name') !== currentlySelectedLink) {
+                var activeSubNav = $('.subside-nav.active');
                 activeSubNav.removeClass('active');
-            }
+            }*/
 
             currentlySelectedLink = $(this).attr('name');
 
@@ -24,12 +26,12 @@ $(document).ready(function() {
             updateDebugInfo();
     });
 
-    $('#nav-menu').on('click', "a[name='treatment']", function() {    
-            $('.subnav-menu').addClass('active');
+    $('#side-nav').on('click', "a[name='treatment']", function() {    
+            $('.subside-nav').addClass('active');
             updateDebugInfo();    
     });
 
-    $('#nav-menu').on('click', "#nav-pin", function() {    
+    $('#side-nav').on('click', "#nav-pin", function() {    
             $(this).toggleClass('selected');
             navPinned = !navPinned;
     });
@@ -38,7 +40,7 @@ $(document).ready(function() {
 
 function updateDebugInfo() {
     $('.initial-page-load').html('Initial page load: ' + initialPageLoad.toString().toUpperCase());
-    $('.nav-menu-state').html('Nav-Menu Open? ' + navExpanded.toString().toUpperCase());
+    $('.side-nav-state').html('side-nav Open? ' + navExpanded.toString().toUpperCase());
     $('.currently-selected-link').html('Current Page: ' + currentlySelectedLink);
     $('.next-event-ready').html('Next event ready: ' + nextEventReady.toString().toUpperCase());
 }
@@ -49,7 +51,7 @@ function openCloseNav() {
 
     var mX, mY, distanceToTarget,         
         $distanceToTarget = $('.menu-debugging .distance-from-target'),
-        $element  = $('#nav-menu');
+        $element  = $('#side-nav');
 
     function calculatedistanceToTarget(elem, mouseX) {
         return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width())), 2)));
@@ -62,8 +64,8 @@ function openCloseNav() {
         if(!initialPageLoad && distanceToTarget < 40 && nextEventReady && !navPinned) {
             nextEventReady = false;
             navExpanded = !navExpanded; 
-            $('#nav-menu').toggleClass('collapsed');    
-            $('#nav-menu').find('li span').fadeToggle(250);                           
+            $('#side-nav').toggleClass('collapsed');    
+            //$('#side-nav').find('li span').fadeToggle(250);                           
         }
         if(!initialPageLoad && distanceToTarget > 40) {
             nextEventReady = true;

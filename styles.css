@@ -66,51 +66,52 @@ VERTICAL NAV MENU
 --------------------------------------------
 */
 
-#nav-menu,
-.subnav-menu {
+#side-nav,
+.subside-nav {
   font-size: 1em;
 }
 
-#nav-menu {
-  float: left;
+#side-nav {
   height: 100%;
   width: 200px;
-  transition: all .3s;
+  float: left;
   position: relative;
-  border-right: 1px solid #0099CC;
+  overflow: hidden;
+  border-right: 1px solid #CCC;
   background-color: #F1F1F1;
+  transition: all .3s;
 }
 
-#nav-menu ul {
+#side-nav ul {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
 
-#nav-menu .nav-link span {
+#side-nav .nav-link span {
 	font-size: 1em;
 }
 
-#nav-menu a.nav-link {
+#side-nav a.nav-link {
 	line-height: 44px;
 	padding-left: 50px;
 	display: block;
 }
 
-#nav-menu ul li {
-	border-top: 1px solid white;
-		min-height: 44px;
+#side-nav ul li {
+
+	min-height: 44px;
 }
 
-#nav-menu ul li:last-child {
-	border-bottom: 1px solid white;
+#side-nav ul li:last-child {
+
 }
 
-#nav-menu ul li:hover {
-	background-color: #222222;
+#side-nav ul li:hover {
+	background-color: #DDD;
 }
 
-#nav-menu.collapsed {
+#side-nav.collapsed {
   width: 50px;
   transition: all .3s;
 }
@@ -122,8 +123,12 @@ VERTICAL NAV MENU
 	border: 1px solid #0EBFE9;
 	position: absolute;
 	margin: 3px;
-	bottom: 0;
+	bottom: 20px;
 	left: 0;
+}
+
+.nav-link.selected {
+	background-color: #ADD8E6;
 }
 
 #nav-pin.selected {
@@ -135,7 +140,7 @@ SUB-NAV MENU (CURRENTLY COMMENTED OUT)
 --------------------------------------------
 */
 
-.subnav-menu {
+.subside-nav {
 	display: none;
 	padding-left: 20px;
 	float: left;
@@ -144,11 +149,11 @@ SUB-NAV MENU (CURRENTLY COMMENTED OUT)
  	background-color: #3C3D36;
 }
 
-.subnav-menu.active {
+.subside-nav.active {
 	display: block;	
 }
 
-.subnav-menu ul li {
+.subside-nav ul li {
 	padding: 10px 0 10px 0px;	
 }
 
@@ -178,3 +183,14 @@ DEBUGGING
 	border: 1px solid gray;
 }
 
+.brand-logo {
+	float: right;
+	font-family: 'Montez', cursive;
+	font-size: 3.2em;
+	height: 50px;
+	margin: 20px 55px 30px 0px;
+}
+
+.brand-logo a {
+	float: left;
+}
