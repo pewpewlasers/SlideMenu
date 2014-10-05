@@ -61,14 +61,14 @@ function openCloseNav() {
         mX = e.pageX;
         distanceToTarget = calculatedistanceToTarget($element, mX);
 
-        if(!initialPageLoad && distanceToTarget < 40 && nextEventReady && !navPinned) {
+        if(!initialPageLoad && distanceToTarget < 50 && nextEventReady && !navPinned) {
             nextEventReady = false;
             navExpanded = !navExpanded; 
             $('#side-nav').toggleClass('collapsed');    
             $('#main-content').toggleClass('collapsed');
             //$('#side-nav').find('li span').fadeToggle(250);                           
         }
-        if(!initialPageLoad && distanceToTarget > 40) {
+        if(!initialPageLoad && distanceToTarget > 50) {
             nextEventReady = true;
         }
         

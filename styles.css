@@ -70,26 +70,15 @@ VERTICAL NAV MENU
   font-size: 1em;
 }
 
-/* #side-nav {
-  height: 100%;
-  width: 200px;
-  float: left;
-  position: relative;
-  overflow: hidden;
-  border-right: 1px solid #CCC;
-  background-color: #F1F1F1;
-  transition: all .3s;
-} */
-
 #side-nav,
 #main-content {
-	transition: all .3s;
+	transition: all .4s;
 }
 
 #side-nav {
-	position: fixed;
-	left: 0;
-	top: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
   height: 100%;
   width: 200px;
   overflow: hidden;
@@ -101,7 +90,8 @@ VERTICAL NAV MENU
 
 #side-nav a {	
   color: #0099CC;
-  text-decoration: none;
+  text-decoration: none;  
+  position: relative;
 }
 
 #side-nav ul {
@@ -110,23 +100,11 @@ VERTICAL NAV MENU
   overflow: hidden;
 }
 
-#side-nav .nav-link span {
-	font-size: 1em;
-}
-
-#side-nav a.nav-link {
-	line-height: 44px;
-	padding-left: 50px;
-	display: block;
-}
-
 #side-nav ul li {
-
 	min-height: 44px;
 }
 
 #side-nav ul li:last-child {
-
 }
 
 #side-nav ul li:hover {
@@ -135,6 +113,44 @@ VERTICAL NAV MENU
 
 #side-nav.collapsed {
   width: 50px;
+}
+
+.nav-link.selected {
+	background-color: #DEEAFF;
+}
+
+#nav-pin.selected {
+	background-color: #0EBFE9;
+}
+
+.nav-link .name {	
+	color: #777;
+  	text-decoration: none;  
+  	font-family: 'Open-Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  	font-size: 1.2em;
+}
+
+.nav-link.selected .name {
+	color: #0099CC;
+	font-weight: 700;
+}
+
+.nav-link .glyphicon {
+	font-size: 20px;
+	position: absolute;
+	top: 12px;
+	left: 14px;
+	color: #777;
+}
+
+.nav-link.selected .glyphicon {
+	color: #0099CC;
+}
+
+#side-nav a.nav-link {
+	line-height: 44px;
+	padding-left: 50px;
+	display: block;
 }
 
 #nav-pin {
@@ -146,14 +162,6 @@ VERTICAL NAV MENU
 	margin: 3px;
 	bottom: 20px;
 	left: 0;
-}
-
-.nav-link.selected {
-	background-color: #ADD8E6;
-}
-
-#nav-pin.selected {
-	background-color: #0EBFE9;
 }
 
 /*
@@ -214,7 +222,7 @@ DEBUGGING
 	font-family: 'Montez', cursive;
 	font-size: 3.2em;
 	height: 50px;
-	margin: 20px 55px 30px 0px;
+	margin: 20px 55px 40px 0px;
 }
 
 .brand-logo a {
